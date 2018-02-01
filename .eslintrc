@@ -12,6 +12,7 @@
     "no-bitwise": "off",
     "react/prop-types": "off",
     "react/prefer-stateless-function": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "linebreak-style": "off"
   }
 }
