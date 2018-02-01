@@ -18,7 +18,7 @@ const articles = [
   },
 ];
 
-const articelsWithLink = articles.map(article => ({
+const articlesWithLink = articles.map(article => ({
   ...article,
   itemProps: {
     as: 'a',
@@ -28,4 +28,4 @@ const articelsWithLink = articles.map(article => ({
 
 storiesOf('ArticleList', module)
   .add('default', () => <ArticleList articles={articles} />)
-  .add('links', () => <ArticleList articles={articelsWithLink} />);
+  .add('links', () => <ArticleList articles={articlesWithLink} />);

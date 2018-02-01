@@ -1,6 +1,6 @@
 import reducer, {
   ArticleListLoading,
-  successArticleList,
+  ArticleListSuccess,
   LOAD,
   SUCCESS,
 } from './articleList';
@@ -36,8 +36,8 @@ describe('articleList', () => {
 });
 
 describe('successList', () => {
-  it('successArticleList 동작 여부 확인', () => {
-    const action = successArticleList();
+  it('ArticleListSuccess 동작 여부 확인', () => {
+    const action = ArticleListSuccess();
     expect(action).toEqual({
       type: SUCCESS,
     });
