@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ArticleList from '../components/ArticleList';
 import { fetchArticleList } from '../ducks/articleList';
+import withLoading from '../hocs/withLoading';
 
 export default connect(
   state => ({
@@ -11,4 +12,4 @@ export default connect(
       dispatch(fetchArticleList());
     },
   }),
-)(ArticleList);
+)(withLoading(ArticleList));
