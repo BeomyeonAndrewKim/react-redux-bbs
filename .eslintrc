@@ -5,7 +5,10 @@
     "node": true,
     "jest": true
   },
-  "extends": "airbnb",
+  "plugins": [
+    "prettier"
+  ],
+  "extends": ["airbnb","prettier"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/prefer-default-export": "off",
@@ -13,6 +16,9 @@
     "react/prop-types": "off",
     "react/prefer-stateless-function": "off",
     "import/no-extraneous-dependencies": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "prettier/prettier": ["error",
+      { "singleQuote": true,
+      "trailingComma": "all" } ]
   }
 }

@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import ArticleList from '../src/components/ArticleList';
 
-
 const articles = [
   {
     id: 'article0',
