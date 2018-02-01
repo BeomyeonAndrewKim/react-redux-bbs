@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 // import {Link} from 'react-router-dom';
-import { Menu } from "semantic-ui-react";
+import { Menu } from 'semantic-ui-react';
 
 export default class TopMenu extends Component {
   static defaultProps = {
     logoProps: {},
-    accountProps: {}
+    accountProps: {},
   };
   state = {};
   render() {
@@ -13,7 +13,7 @@ export default class TopMenu extends Component {
     return (
       <Menu>
         <Menu.Item
-          /*as={Link} to="/list" */
+          /* as={Link} to="/list" */
           {...logoProps}
           name="browse"
         >
