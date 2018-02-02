@@ -6,9 +6,13 @@ export default class ArticleForm extends Component {
   static defaultProps = {
     errorMessage: '',
     onSubmit: () => {},
+    creating: false,
   };
 
-  state = {};
+  state = {
+    title: '',
+    content: '',
+  };
 
   handleChange = (e, { name, value }) => this.setState({ [name]: value });
 
@@ -17,21 +21,21 @@ export default class ArticleForm extends Component {
   };
   render() {
     const { title, content } = this.state;
-    const { errorMessage } = this.props;
+    const { errorMessage, creating } = this.props;
     return (
-      <Form as="div">
+      <Form loading={creating}>
         <Form.Field
-          id="form-input-control-Title"
           control={Input}
           label="Title"
+          name="title"
           placeholder="Title"
           onChange={this.handleChange}
           value={title}
         />
         <Form.Field
-          id="form-textarea-control-Content"
           control={TextArea}
           label="Content"
+          name="content"
           placeholder="Content"
           onChange={this.handleChange}
           value={content}

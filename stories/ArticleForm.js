@@ -7,4 +7,5 @@ storiesOf('ArticleForm', module)
   .add('default', () => <ArticleForm onSubmit={action('handleSubmit')} />)
   .add('error', () => (
     <ArticleForm errorMessage="You should fill out the form" />
-  ));
+  ))
+  .add('loading', () => <ArticleForm creating />);
