@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import * as firebase from "firebase";
-import { Redirect } from "react-router-dom";
-import { Dimmer, Loader } from "semantic-ui-react";
-import "semantic-ui-css/semantic.min.css";
+import React, { Component } from 'react';
+import * as firebase from 'firebase';
+import { Redirect } from 'react-router-dom';
+import { Dimmer, Loader } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
 
 export default function withAuth(WrappedComponent) {
   return class extends Component {
     state = {
       currentUser: null,
       loading: false,
-      redirectToLogin: false
+      redirectToLogin: false,
     };
 
     componentWillMount() {
@@ -23,7 +23,7 @@ export default function withAuth(WrappedComponent) {
         user
           ? this.setState({
               currentUser: user,
-              loading: false
+              loading: false,
             })
           : this.setState({ redirectToLogin: true });
       });
@@ -38,9 +38,8 @@ export default function withAuth(WrappedComponent) {
             <Loader />
           </Dimmer>
         );
-      } else {
-        return <WrappedComponent {...this.props} />;
       }
+      return <WrappedComponent {...this.props} />;
     }
   };
 }
